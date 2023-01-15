@@ -24,12 +24,6 @@ data_store = html.Div([dcc.Store(id="df_ts", data=df_ts.to_json()),
                        ])
 
 
-# app = dash.Dash(__name__, title="Segmentation",
-#                 # external_stylesheets=[
-#                 #     dbc.themes.BOOTSTRAP] + external_style_sheet,
-#                 suppress_callback_exceptions=True,
-#                 )
-
 app = dash.Dash(__name__, title="Segmentation",
                 external_stylesheets=[dbc.themes.BOOTSTRAP],
                 suppress_callback_exceptions=True,
