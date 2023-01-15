@@ -72,5 +72,8 @@ def display_page(path):
     return  header, footer
 
 
-if __name__ == '__main__':
-    app.run_server(debug=True)
+# if __name__ == '__main__':
+#     app.run_server(debug=True)
+
+if __name__ == "__main__":
+    app.run_server(host="0.0.0.0", port=5050)
