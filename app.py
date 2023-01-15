@@ -3,7 +3,7 @@ import dash
 import dash_bootstrap_components as dbc
 from dash import dcc, html, Input, Output, callback
 from components.layouts import header, footer, sidebar
-from pages import home, page1, page2, about
+from pages import home, Description, Model, about
 
 df_ts = pd.read_parquet('data/df_ts.parquet.gzip')
 df_cus = pd.read_parquet('data/df_cus.parquet.gzip')
@@ -58,10 +58,10 @@ app.layout = html.Div([
 def routing(path):
     if path == "/":
         return home.home
-    elif path == "/page1":
-        return page1.layout1
-    elif path == "/page2":
-        return page2.layout2
+    elif path == "/Description":
+        return Description.layout1
+    elif path == "/Model":
+        return Model.layout2
     elif path == "/about":
         return about.about_page_content
 

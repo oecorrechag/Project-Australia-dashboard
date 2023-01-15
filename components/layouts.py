@@ -37,7 +37,7 @@ sidebar = html.Div(
                         html.I(className="menu-icon tf-icons bx bx-group"),
                         html.Span("Page Description"),
                     ],
-                    href="/page1",
+                    href="/Description",
                     active="exact",
                     className="pe-3"
                 ),
@@ -47,7 +47,7 @@ sidebar = html.Div(
                         html.I(className="menu-icon tf-icons bx bx-info-circle"),
                         html.Span("Page Model"),
                     ],
-                    href="/page2",
+                    href="/Model",
                     active="exact",
                     className="pe-3",
                 ),
