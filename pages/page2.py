@@ -27,4 +27,3 @@ layout2 = html.Div([
     ]),
 
 ], style={"padding": "0px 0px 0px 100px"})
-
