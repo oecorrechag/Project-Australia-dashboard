@@ -5,7 +5,6 @@ from dash import dcc, html, Input, Output, callback
 from components.layouts import header, footer, sidebar
 from pages import home, page1, page2, about
 
-
 df_ts = pd.read_parquet('data/df_ts.parquet.gzip')
 df_cus = pd.read_parquet('data/df_cus.parquet.gzip')
 df_cir = pd.read_parquet('data/df_cir.parquet.gzip')
@@ -69,8 +68,6 @@ def routing(path):
         return page1.layout1
     elif path == "/page2":
         return page2.layout2
-    # elif path == "/page3":
-    #     return page3.layout3
     elif path == "/about":
         return about.about_page_content
 
