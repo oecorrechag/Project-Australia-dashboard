@@ -3,10 +3,6 @@ import dash_bootstrap_components as dbc
 
 header = html.Div([
     html.H1('Segmentation - Project Australian'),
-    html.Div([
-        # html.P('Dash converts Python classes into HTML'),
-        # html.P("This conversion happens behind the scenes by Dash's JavaScript front-end")
-        ]),
     ], style={"padding": "10px 0px 0px 100px"})
 
 footer = html.Div([
@@ -55,16 +51,6 @@ sidebar = html.Div(
                     active="exact",
                     className="pe-3",
                 ),
-
-                # dbc.NavLink(
-                #     [
-                #         html.I(className="menu-icon tf-icons bx bx-envelope-open"),
-                #         html.Span("Optim Model"),
-                #     ],
-                #     href="/page3",
-                #     active="exact",
-                #     className="pe-3",
-                # ),
 
                 dbc.NavLink(
                     [
