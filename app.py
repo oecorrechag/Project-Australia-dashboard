@@ -2,7 +2,7 @@ import pandas as pd
 import dash
 import dash_bootstrap_components as dbc
 from dash import dcc, html, Input, Output, callback
-from pages import home, Description, Model, about
+from pages import description, home, about, model
 
 from pages.header import header
 from pages.footer import footer
@@ -55,14 +55,14 @@ app.layout = html.Div([
     Input(component_id='url', component_property='pathname')
 )
 def routing(path):
-    if path == "/":
+    if (path == '/home') | (path == '/'):
         return home.home
-    elif path == "/Description":
-        return Description.layout1
-    elif path == "/Model":
-        return Model.layout2
+    elif path == "/description":
+        return description.layout1
+    elif path == "/model":
+        return model.layout2
     elif path == "/about":
-        return about.about_page_content
+        return about.about
 
 @callback(Output('header', 'children'),
           Output('footer', 'children'),

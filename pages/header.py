@@ -2,7 +2,6 @@ from dash import html, Input, Output, State, callback
 import dash_bootstrap_components as dbc
 
 from utils.consts import LOGO, TITLE
-
 from components.CallbacksHeader import modal
 
 
@@ -27,9 +26,11 @@ header = html.Nav([
 
                             dbc.NavLink("Home", href="/home", active="partial"),
                             
-                            dbc.NavLink("Page 1", href="/page1", active="partial"),
+                            dbc.NavLink("Description", href="/description", active="partial"),
 
-                            dbc.NavLink("Page 2", href="/page2", active="partial"),
+                            dbc.NavLink("Model", href="/model", active="partial"),
+
+                            dbc.NavLink("About", href="/about", active="partial"),
 
                             modal,
 
@@ -53,3 +54,4 @@ def toggle_modal(n1, n2, is_open):
     if n1 or n2:
         return not is_open
     return is_open
+    
