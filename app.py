@@ -2,8 +2,10 @@ import pandas as pd
 import dash
 import dash_bootstrap_components as dbc
 from dash import dcc, html, Input, Output, callback
-from components.layouts import header, footer, sidebar
 from pages import home, Description, Model, about
+
+from pages.header import header
+from pages.footer import footer
 
 df_ts = pd.read_parquet('data/df_ts.parquet.gzip')
 df_cus = pd.read_parquet('data/df_cus.parquet.gzip')
@@ -35,9 +37,6 @@ app.layout = html.Div([
 
     dcc.Location(id='url'),
     data_store,
-
-    # Menu
-    html.Aside(className="", children=[sidebar]),
 
     # Header
     html.Div(id='header'),
