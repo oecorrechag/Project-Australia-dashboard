@@ -1,7 +1,6 @@
 import pandas as pd
-import dash
 import dash_bootstrap_components as dbc
-from dash import dcc, html, Input, Output, callback
+from dash import Dash, dcc, html, Input, Output, callback
 from pages import description, home, about, model
 
 from pages.header import header
@@ -26,10 +25,10 @@ data_store = html.Div([dcc.Store(id="df_ts", data=df_ts.to_json()),
                        ])
 
 
-app = dash.Dash(__name__, title="Segmentation",
-                external_stylesheets=[dbc.themes.BOOTSTRAP],
-                suppress_callback_exceptions=True,
-                )
+app = Dash(__name__, title="Segmentation",
+           external_stylesheets=[dbc.themes.BOOTSTRAP],
+           suppress_callback_exceptions=True,
+           )
 server = app.server
 
 
